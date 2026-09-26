@@ -16,7 +16,6 @@
                 <li><a href="#proyek">Proyek</a></li>
                 <li><a href="#kontak">Kontak</a></li>
             </ul>
-            <!-- Tombol Dark Mode -->
             <button id="darkModeToggle" class="dark-mode-btn">🌙</button>
         </nav>
     </header>
@@ -27,16 +26,15 @@
         <a href="#proyek" class="btn">Lihat Proyek</a>
     </section>
 
-    <section id="tentang">
+    <section id="tentang" class="fade-in">
         <h2>Tentang Saya</h2>
         <p>Saya sedang belajar menjadi Frontend Developer. Saat ini saya fokus mempelajari HTML, CSS, dan JavaScript. Saya suka membuat tampilan website yang bersih dan mudah digunakan.</p>
     </section>
 
-    <section id="proyek">
+    <section id="proyek" class="fade-in">
         <h2>Proyek Saya</h2>
         <div class="card-container">
-            <!-- Kartu 1 -->
-            <div class="card">
+            <div class="card fade-in">
                 <h3>Portfolio Website</h3>
                 <p>Website portfolio pribadi pertama saya menggunakan HTML, CSS, dan JavaScript murni.</p>
                 <span class="tag">HTML</span>
@@ -44,16 +42,14 @@
                 <span class="tag">JavaScript</span>
             </div>
 
-            <!-- Kartu 2 -->
-            <div class="card">
+            <div class="card fade-in">
                 <h3>Landing Page Produk</h3>
                 <p>Landing page sederhana untuk produk digital dengan desain modern dan responsif.</p>
                 <span class="tag">HTML</span>
                 <span class="tag">CSS</span>
             </div>
 
-            <!-- Kartu 3 -->
-            <div class="card">
+            <div class="card fade-in">
                 <h3>Kalkulator Sederhana</h3>
                 <p>Kalkulator interaktif dengan JavaScript yang bisa melakukan operasi dasar.</p>
                 <span class="tag">HTML</span>
@@ -61,8 +57,7 @@
                 <span class="tag">JavaScript</span>
             </div>
 
-            <!-- Kartu 4 -->
-            <div class="card">
+            <div class="card fade-in">
                 <h3>To-Do List App</h3>
                 <p>Aplikasi daftar tugas yang bisa menambah, mencentang, dan menghapus item.</p>
                 <span class="tag">HTML</span>
@@ -70,8 +65,7 @@
                 <span class="tag">JavaScript</span>
             </div>
 
-            <!-- Kartu 5 -->
-            <div class="card">
+            <div class="card fade-in">
                 <h3>Coming Soon</h3>
                 <p>Project selanjutnya sedang dalam pengembangan. Stay tuned!</p>
                 <span class="tag">Soon</span>
@@ -79,10 +73,30 @@
         </div>
     </section>
 
-    <section id="kontak">
+    <section id="kontak" class="fade-in">
         <h2>Kontak</h2>
-        <p>Email: emailkamu@gmail.com</p>
-        <p>GitHub: github.com/usernamekamu</p>
+        <p class="kontak-desc">Silakan kirim pesan melalui form di bawah ini.</p>
+
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <label for="namaPengirim">Nama</label>
+                <input type="text" id="namaPengirim" name="nama" placeholder="Masukkan nama kamu" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pesan">Pesan</label>
+                <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan kamu di sini..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Kirim Pesan</button>
+        </form>
+
+        <div id="formMessage" class="form-message"></div>
     </section>
 
     <footer>
