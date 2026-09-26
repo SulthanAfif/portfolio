@@ -45,5 +45,3 @@ Cocok digunakan untuk:
 Selesai! Portfolio kamu sudah online.
 
 ---
-
-## 📁 Struktur File
