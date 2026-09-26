@@ -3,113 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Saya</title>
+    <title>Nama Anda | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Loading Animation -->
+    <!-- Loading -->
     <div id="loader">
         <div class="spinner"></div>
         <p>Memuat...</p>
     </div>
 
+    <!-- Navbar -->
     <header>
         <nav>
-            <h1>Portfolio</h1>
+            <a href="#" class="logo">Portofolio<span>.</span></a>
             <ul>
                 <li><a href="#beranda">Beranda</a></li>
                 <li><a href="#tentang">Tentang</a></li>
                 <li><a href="#proyek">Proyek</a></li>
                 <li><a href="#kontak">Kontak</a></li>
             </ul>
-            <button id="darkModeToggle" class="dark-mode-btn">🌙</button>
         </nav>
     </header>
 
+    <!-- Hero -->
     <section id="beranda" class="hero">
-        <h2>Halo, saya <span id="nama">Muhammad Sulthan Muqsith Afif</span></h2>
-        <h1>Junior Web Developer</h1>
-        <a href="#proyek" class="btn">Lihat Proyek</a>
+        <div class="hero-content">
+            <p class="hero-label">Halo, saya</p>
+            <h1>Nama<br>Kamu</h1>
+            <p class="hero-subtitle">Web Developer</p>
+            <p class="hero-desc">Fresh graduate</p>
+            <div class="hero-buttons">
+                <a href="#proyek" class="btn btn-primary">Lihat Proyek</a>
+                <a href="#kontak" class="btn btn-outline">Hubungi Saya</a>
+            </div>
+        </div>
     </section>
 
+    <!-- Tentang -->
     <section id="tentang" class="fade-in">
         <h2>Tentang Saya</h2>
-        <p>Fresh graduate Sistem Informasi dengan minat pada pengembangan web menggunakan Laravel.
-        Terbiasa membangun aplikasi full-stack mulai dari sisi customer hingga dashboard admin, meliputi
-        manajemen produk, transaksi, dan laporan, dengan dukungan MySQL dan Git. Bersertifikat BNSP
-        sebagai Junior Web Developer. Siap berkontribusi sebagai Web Developer / Junior Backend
-        Developer.
-        </p>
-    </section>
-
-    <section id="proyek" class="fade-in">
-        <h2>Proyek Saya</h2>
-        <div class="card-container">
-    <!-- Proyek 1 -->
-    <a href="https://github.com/SulthanAfif/TokoKita" target="_blank" class="card fade-in">
-        <h3>TokoKita</h3>
-        <p>Aplikasi toko online sederhana untuk mengelola produk dan transaksi.</p>
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JavaScript</span>
-    </a>
-
-    <!-- Proyek 2 -->
-    <a href="https://github.com/SulthanAfif/SenjaKopi" target="_blank" class="card fade-in">
-        <h3>SenjaKopi</h3>
-        <p>Website kedai kopi dengan tampilan modern dan responsif.</p>
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JavaScript</span>
-    </a>
-
-    <!-- Proyek 3 -->
-    <a href="https://github.com/SulthanAfif/booking-lapangan" target="_blank" class="card fade-in">
-        <h3>Booking Lapangan</h3>
-        <p>Sistem pemesanan lapangan olahraga secara online.</p>
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JavaScript</span>
-    </a>
-
-    <!-- Proyek 4 -->
-    <a href="https://github.com/SulthanAfif/POS-app" target="_blank" class="card fade-in">
-        <h3>POS App</h3>
-        <p>Aplikasi Point of Sale untuk membantu proses transaksi penjualan.</p>
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">JavaScript</span>
-    </a>
-
-    <!-- Coming Soon -->
-    <div class="card fade-in coming-soon">
-        <h3>Coming Soon</h3>
-        <p>Project selanjutnya sedang dalam pengembangan. Stay tuned!</p>
-        <span class="tag">Soon</span>
-    </div>
-</div>
-    </section>
-
-    <section id="kontak" class="fade-in">
-    <h2>Kontak</h2>
-        <div class="kontak-list">
+        <div class="about-content">
             <p>
-                <strong>Email:</strong>
-                <a href="msulthanmuqsith@gmail.com">msulthanmuqsith@gmail.com</a>
+                Jelaskan diri kamu
             </p>
             <p>
-                <strong>GitHub:</strong>
-                <a href="https://github.com/SulthanAfif" target="_blank">github.com/SulthanAfif</a>
-            </p>
-            <p>
-                <strong>LinkedIn:</strong>
-                <a href="https://www.linkedin.com/in/msulthanmuqsith" target="_blank">linkedin.com/in/msulthanmuqsith</a>
+                Siap berkontribusi sebagai 
+                <strong>Web Developer</strong> / <strong>Junior Web Developer</strong>.
             </p>
         </div>
     </section>
 
+    <!-- Proyek -->
+    <section id="proyek" class="fade-in">
+        <h2>Proyek Saya</h2>
+        <p class="section-desc">Beberapa project yang pernah saya kerjakan</p>
+
+        <div class="card-container">
+            <!--  -->
+            <div class="card fade-in">
+                <div class="card-header">
+                    <h3>Admin</h3>
+                    <span class="card-badge">Administrasi</span>
+                </div>
+                <p>Jelaskan.</p>
+                <div class="card-tags">
+                    <span class="tag">misal ms word</span>
+                    <span class="tag">ms exel</span>
+                    <span class="tag">powerpoint</span>
+                </div>
+                <a href="#" target="_blank" class="btn-detail">
+                    Lihat Detail →
+                </a>
+            </div>
+
+            <!-- bebas -->
+            <div class="card fade-in">
+                <div class="card-header">
+                    <h3>SenjaKopi</h3>
+                    <span class="card-badge">Website</span>
+                </div>
+                <p>jelaskan.</p>
+                <div class="card-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <a href="#" target="_blank" class="btn-detail">
+                    Lihat Detail →
+                </a>
+            </div>
+
+            <!-- Booking Lapangan -->
+            <div class="card fade-in">
+                <div class="card-header">
+                    <h3>Booking Lapangan</h3>
+                    <span class="card-badge">Booking System</span>
+                </div>
+                <p>Jelaskan.</p>
+                <div class="card-tags">
+                    <span class="tag">Laravel</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Bootstrap</span>
+                </div>
+                <a href="#" target="_blank" class="btn-detail">
+                    Lihat Detail →
+                </a>
+            </div>
+
+
+            <!-- Coming Soon -->
+            <div class="card fade-in coming-soon">
+                <div class="card-header">
+                    <h3>Coming Soon</h3>
+                    <span class="card-badge">Soon</span>
+                </div>
+                <p>Project selanjutnya sedang dalam pengembangan. Stay tuned!</p>
+                <div class="card-tags">
+                    <span class="tag">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="fade-in">
+    <h2>Kontak</h2>
+    <p class="section-desc">Silakan hubungi saya melalui kontak di bawah ini</p>
+
+    <div class="kontak-grid">
+        <a href="#" class="kontak-card">
+            <div class="kontak-icon">📧</div>
+            <div>
+                <h4>Email</h4>
+                <p>@gmail.com</p>
+            </div>
+        </a>
+
+        <a href="#" target="_blank" class="kontak-card">
+            <div class="kontak-icon">💻</div>
+            <div>
+                <h4>GitHub</h4>
+                <p>github.com/</p>
+            </div>
+        </a>
+
+        <a href="#" target="_blank" class="kontak-card">
+            <div class="kontak-icon">💼</div>
+            <div>
+                <h4>LinkedIn</h4>
+                <p>linkedin.com/in</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2026 Muhammad Sulthan Muqsith Afif</p>
+        <p>© 2026. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
