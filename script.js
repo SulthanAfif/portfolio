@@ -1,6 +1,19 @@
 // ========== Ganti Nama Kamu ==========
-const nama = "Nama Kamu";
-document.getElementById("nama").textContent = nama;
+const nama = "Muhammad Sulthan Muqsith Afif";
+const namaElement = document.getElementById("nama");
+if (namaElement) {
+    namaElement.textContent = nama;
+}
+
+// ========== Loading Animation ==========
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add("hidden");
+        }, 800); // Loading muncul selama 0.8 detik
+    }
+});
 
 // ========== Dark Mode ==========
 const darkModeToggle = document.getElementById("darkModeToggle");
@@ -8,20 +21,22 @@ const body = document.body;
 
 if (localStorage.getItem("darkMode") === "enabled") {
     body.classList.add("dark-mode");
-    darkModeToggle.textContent = "☀️";
+    if (darkModeToggle) darkModeToggle.textContent = "☀️";
 }
 
-darkModeToggle.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
+if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
 
-    if (body.classList.contains("dark-mode")) {
-        darkModeToggle.textContent = "☀️";
-        localStorage.setItem("darkMode", "enabled");
-    } else {
-        darkModeToggle.textContent = "🌙";
-        localStorage.setItem("darkMode", "disabled");
-    }
-});
+        if (body.classList.contains("dark-mode")) {
+            darkModeToggle.textContent = "☀️";
+            localStorage.setItem("darkMode", "enabled");
+        } else {
+            darkModeToggle.textContent = "🌙";
+            localStorage.setItem("darkMode", "disabled");
+        }
+    });
+}
 
 // ========== Animasi Saat Scroll ==========
 const fadeElements = document.querySelectorAll(".fade-in");
@@ -36,39 +51,35 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.15
 });
 
-fadeElements.forEach(el => {
-    observer.observe(el);
-});
+fadeElements.forEach(el => observer.observe(el));
 
-// ========== Form Kontak ==========
+// ========== Form Kontak (sederhana, tanpa backend) ==========
 const contactForm = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 
-contactForm.addEventListener("submit", function(e) {
-    e.preventDefault(); // Mencegah halaman reload
+if (contactForm) {
+    contactForm.addEventListener("submit", function(e) {
+        e.preventDefault();
 
-    const namaPengirim = document.getElementById("namaPengirim").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const pesan = document.getElementById("pesan").value.trim();
+        const namaPengirim = document.getElementById("namaPengirim").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const pesan = document.getElementById("pesan").value.trim();
 
-    if (namaPengirim === "" || email === "" || pesan === "") {
-        formMessage.textContent = "Mohon isi semua kolom!";
-        formMessage.className = "form-message error";
-        return;
-    }
+        if (namaPengirim === "" || email === "" || pesan === "") {
+            formMessage.textContent = "Mohon isi semua kolom!";
+            formMessage.className = "form-message error";
+            return;
+        }
 
-    // Simulasi pengiriman (karena belum pakai backend)
-    formMessage.textContent = "Pesan berhasil dikirim! Terima kasih 😊";
-    formMessage.className = "form-message success";
+        formMessage.textContent = "Pesan berhasil dikirim! Terima kasih 😊";
+        formMessage.className = "form-message success";
+        contactForm.reset();
 
-    // Kosongkan form
-    contactForm.reset();
-
-    // Hilangkan pesan sukses setelah 4 detik
-    setTimeout(() => {
-        formMessage.textContent = "";
-        formMessage.className = "form-message";
-    }, 4000);
-});
+        setTimeout(() => {
+            formMessage.textContent = "";
+            formMessage.className = "form-message";
+        }, 4000);
+    });
+}
 
 console.log("Website portfolio berhasil dimuat!");

@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Loading Animation -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>Memuat...</p>
+    </div>
+
     <header>
         <nav>
             <h1>Portfolio</h1>
@@ -21,86 +27,89 @@
     </header>
 
     <section id="beranda" class="hero">
-        <h2>Halo, saya <span id="nama">Nama Kamu</span></h2>
-        <p>Frontend Developer Pemula</p>
+        <h2>Halo, saya <span id="nama">Muhammad Sulthan Muqsith Afif</span></h2>
+        <h1>Junior Web Developer</h1>
         <a href="#proyek" class="btn">Lihat Proyek</a>
     </section>
 
     <section id="tentang" class="fade-in">
         <h2>Tentang Saya</h2>
-        <p>Saya sedang belajar menjadi Frontend Developer. Saat ini saya fokus mempelajari HTML, CSS, dan JavaScript. Saya suka membuat tampilan website yang bersih dan mudah digunakan.</p>
+        <p>Fresh graduate Sistem Informasi dengan minat pada pengembangan web menggunakan Laravel.
+        Terbiasa membangun aplikasi full-stack mulai dari sisi customer hingga dashboard admin, meliputi
+        manajemen produk, transaksi, dan laporan, dengan dukungan MySQL dan Git. Bersertifikat BNSP
+        sebagai Junior Web Developer. Siap berkontribusi sebagai Web Developer / Junior Backend
+        Developer.
+        </p>
     </section>
 
     <section id="proyek" class="fade-in">
         <h2>Proyek Saya</h2>
         <div class="card-container">
-            <div class="card fade-in">
-                <h3>Portfolio Website</h3>
-                <p>Website portfolio pribadi pertama saya menggunakan HTML, CSS, dan JavaScript murni.</p>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-            </div>
+    <!-- Proyek 1 -->
+    <a href="https://github.com/SulthanAfif/TokoKita" target="_blank" class="card fade-in">
+        <h3>TokoKita</h3>
+        <p>Aplikasi toko online sederhana untuk mengelola produk dan transaksi.</p>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+    </a>
 
-            <div class="card fade-in">
-                <h3>Landing Page Produk</h3>
-                <p>Landing page sederhana untuk produk digital dengan desain modern dan responsif.</p>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-            </div>
+    <!-- Proyek 2 -->
+    <a href="https://github.com/SulthanAfif/SenjaKopi" target="_blank" class="card fade-in">
+        <h3>SenjaKopi</h3>
+        <p>Website kedai kopi dengan tampilan modern dan responsif.</p>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+    </a>
 
-            <div class="card fade-in">
-                <h3>Kalkulator Sederhana</h3>
-                <p>Kalkulator interaktif dengan JavaScript yang bisa melakukan operasi dasar.</p>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-            </div>
+    <!-- Proyek 3 -->
+    <a href="https://github.com/SulthanAfif/booking-lapangan" target="_blank" class="card fade-in">
+        <h3>Booking Lapangan</h3>
+        <p>Sistem pemesanan lapangan olahraga secara online.</p>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+    </a>
 
-            <div class="card fade-in">
-                <h3>To-Do List App</h3>
-                <p>Aplikasi daftar tugas yang bisa menambah, mencentang, dan menghapus item.</p>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
-            </div>
+    <!-- Proyek 4 -->
+    <a href="https://github.com/SulthanAfif/POS-app" target="_blank" class="card fade-in">
+        <h3>POS App</h3>
+        <p>Aplikasi Point of Sale untuk membantu proses transaksi penjualan.</p>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+    </a>
 
-            <div class="card fade-in">
-                <h3>Coming Soon</h3>
-                <p>Project selanjutnya sedang dalam pengembangan. Stay tuned!</p>
-                <span class="tag">Soon</span>
-            </div>
-        </div>
+    <!-- Coming Soon -->
+    <div class="card fade-in coming-soon">
+        <h3>Coming Soon</h3>
+        <p>Project selanjutnya sedang dalam pengembangan. Stay tuned!</p>
+        <span class="tag">Soon</span>
+    </div>
+</div>
     </section>
 
     <section id="kontak" class="fade-in">
-        <h2>Kontak</h2>
-        <p class="kontak-desc">Silakan kirim pesan melalui form di bawah ini.</p>
-
-        <form id="contactForm" class="contact-form">
-            <div class="form-group">
-                <label for="namaPengirim">Nama</label>
-                <input type="text" id="namaPengirim" name="nama" placeholder="Masukkan nama kamu" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
-            </div>
-
-            <div class="form-group">
-                <label for="pesan">Pesan</label>
-                <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan kamu di sini..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn-submit">Kirim Pesan</button>
-        </form>
-
-        <div id="formMessage" class="form-message"></div>
+    <h2>Kontak</h2>
+        <div class="kontak-list">
+            <p>
+                <strong>Email:</strong>
+                <a href="msulthanmuqsith@gmail.com">msulthanmuqsith@gmail.com</a>
+            </p>
+            <p>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/SulthanAfif" target="_blank">github.com/SulthanAfif</a>
+            </p>
+            <p>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/msulthanmuqsith" target="_blank">linkedin.com/in/msulthanmuqsith</a>
+            </p>
+        </div>
     </section>
 
     <footer>
-        <p>© 2026 Nama Kamu. Dibuat dengan ❤️</p>
+        <p>© 2026 Muhammad Sulthan Muqsith Afif</p>
     </footer>
 
     <script src="script.js"></script>
